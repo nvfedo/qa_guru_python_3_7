@@ -85,6 +85,6 @@ def open_issues_list():
     browser.element('#issues-tab').click()
 
 
-@allure.step('Проверяем наличие Issues #1')
+@allure.step('Проверяем наличие Issue с определенным названием')
 def should_have_issue_with_name(issue_name):
     browser.element('#issue_1_link').should(have.exact_text('Test issue'))
