@@ -13,8 +13,8 @@ from allure_commons.types import Severity
 @allure.label("holder", "nvfedo")
 @allure.feature("Поиск Issue в Github")
 @allure.story("Поиск Issue в Github по названию 'Test issue'")
-@allure.link("https://github.com/nvfedo/qa_guru_python_3_7/tree/main/tests", name="Link with tests")
-def test_search_github_issue():
+@allure.link("https://github.com/nvfedo/qa_guru_python_3_7/tree/main/tests", name="Link wit222222222222h tests")
+def test_search_github_issue(browser_open_and_maximize_window):
     browser.open('https://github.com/')
     browser.element('.header-search-input').type('nvfedo/qa_guru_python_3_7').press_enter()
     browser.element(by.link_text('nvfedo/qa_guru_python_3_7')).click()
@@ -31,7 +31,7 @@ def test_search_github_issue():
 @allure.feature("Поиск Issue в Github")
 @allure.story("Поиск Issue в Github по названию 'Test issue' с помощью шагов")
 @allure.link("https://github.com/nvfedo/qa_guru_python_3_7/tree/main/tests", name="Link with tests")
-def test_with_steps_search_github_issue():
+def test_with_steps_search_github_issue(browser_open_and_maximize_window):
     with allure.step('Открываем стартовую страницу Github'):
         browser.open('https://github.com/')
 
@@ -57,7 +57,7 @@ def test_with_steps_search_github_issue():
 @allure.feature("Поиск Issue в Github")
 @allure.story("Поиск Issue в Github по названию 'Test issue' с помощью декоратора")
 @allure.link("https://github.com/nvfedo/qa_guru_python_3_7/tree/main/tests", name="Link with tests")
-def test_with_decorators_search_github_issue():
+def test_with_decorators_search_github_issue(browser_open_and_maximize_window):
     open_github_main_page()
     search_repository('nvfedo/qa_guru_python_3_7')
     click_to_repostirory('nvfedo/qa_guru_python_3_7')
